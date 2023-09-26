@@ -3,6 +3,7 @@ const hoursEl = document.querySelector(".hours");
 const minutesEl = document.querySelector(".minutes");
 const secondsEl = document.querySelector(".seconds");
 
+// Aray of months
 const months = [
   "Jan",
   "Feb",
