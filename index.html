@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Clock</title>
+
+    <style>
+      @font-face {
+        font-family: "digi";
+        src: url("../ds_digital/DS-DIGIT.TTF");
+      }
+
+      *,
+      *::after,
+      *::before {
+        box-sizing: inherit;
+        margin: 0;
+        padding: 0;
+        color: inherit;
+      }
+
+      html {
+        background-color: rgb(25, 25, 25);
+        /* font-size: 10px; */
+        font-size: 62.5%;
+      }
+      body {
+        /* width: 110rem; */
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        color: #00ddff;
+      }
+      .container {
+        position: relative;
+        width: 60%;
+        padding: 5rem;
+        margin-top: 15%;
+        background-color: rgb(18, 18, 19);
+        display: flex;
+        justify-content: center;
+        border: 1px solid #00ddff;
+        border-radius: 9px;
+      }
+
+      span {
+        font-size: 15rem;
+        font-weight: 500;
+        font-family: digi;
+      }
+      .date,
+      .author {
+        font-family: digi;
+        font-size: 2rem;
+      }
+      .date {
+        position: absolute;
+        top: 1.2rem;
+        left: 2rem;
+      }
+      .author {
+        position: absolute;
+        bottom: 1.2rem;
+        right: 2rem;
+      }
+
+      @media screen and (max-width: 1000px) {
+        html {
+          font-size: 55%;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        html {
+          font-size: 52%;
+        }
+        .container {
+          position: relative;
+          width: 70%;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        html {
+          font-size: 40%;
+        }
+        .container {
+          position: relative;
+          width: 80%;
+        }
+      }
+
+      @media screen and (max-width: 400px) {
+        html {
+          font-size: 35%;
+        }
+        .container {
+          position: relative;
+          width: 90%;
+        }
+        span {
+          font-size: 12rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p class="date"></p>
+      <span class="hours"></span>
+      <span class="minutes"></span>
+      <span class="seconds"></span>
+
+      <p class="author">Developed by Eng Abdirashid Solo</p>
+    </div>
+
+    <script defer src="script.js"></script>
+  </body>
+</html>
